@@ -1,5 +1,10 @@
 {
   "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
   "dependencies": {
     "@adminjs/express": "^6.1.1",
     "@adminjs/sequelize": "^4.1.1",

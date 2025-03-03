@@ -1,0 +1,283 @@
+/* 
+ * AdminJS Custom CSS for Tiger Analytics
+ * Primary colors: #002147 (dark blue), #F36F21 (orange accent) 
+ */
+
+/* Global styling */
+:root {
+  --tiger-dark-blue: #002147;
+  --tiger-blue-80: #33517A;
+  --tiger-blue-60: #667FA8;
+  --tiger-blue-40: #99AED6;
+  --tiger-blue-20: #CCDEFF;
+  --tiger-orange: #F36F21;
+  --tiger-orange-light: #FF8F4F;
+  --tiger-grey: #f5f5f5;
+}
+
+/* General styles */
+body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+/* Login page specific styles */
+.login-page {
+  background-color: var(--tiger-dark-blue);
+  background-image: url('https://www.tigeranalytics.com/wp-content/uploads/2023/07/hero-image-1.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-logo {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-heading {
+  color: var(--tiger-dark-blue);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.login-form label {
+  color: var(--tiger-dark-blue);
+  font-weight: 500;
+}
+
+.login-form input {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  transition: border-color 0.3s;
+}
+
+.login-form input:focus {
+  border-color: var(--tiger-dark-blue);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 33, 71, 0.2);
+}
+
+.login-button {
+  background-color: var(--tiger-dark-blue);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: var(--tiger-blue-80);
+}
+
+/* AdminJS Dashboard styles */
+.adminjs-TopBar {
+  background-color: var(--tiger-dark-blue) !important;
+}
+
+.adminjs-Sidebar {
+  background-color: white !important;
+  border-right: 1px solid #eee;
+}
+
+.adminjs-Sidebar-logo {
+  background-color: var(--tiger-dark-blue) !important;
+  padding: 1rem !important;
+}
+
+.adminjs-Sidebar-title {
+  color: white !important;
+}
+
+.adminjs-Navigation {
+  margin-top: 1rem;
+}
+
+.adminjs-Navigation-element {
+  border-radius: 4px !important;
+  margin: 0.25rem 0.5rem !important;
+}
+
+.adminjs-Navigation-element.active {
+  background-color: var(--tiger-dark-blue) !important;
+}
+
+.adminjs-Navigation-element:hover:not(.active) {
+  background-color: var(--tiger-grey) !important;
+}
+
+/* Button styles */
+.adminjs-Button {
+  border-radius: 4px !important;
+  font-weight: 500 !important;
+}
+
+.adminjs-Button--primary {
+  background-color: var(--tiger-dark-blue) !important;
+}
+
+.adminjs-Button--primary:hover {
+  background-color: var(--tiger-blue-80) !important;
+}
+
+.adminjs-Button--danger {
+  background-color: #d32f2f !important;
+}
+
+.adminjs-Button--secondary {
+  background-color: white !important;
+  border: 1px solid var(--tiger-dark-blue) !important;
+  color: var(--tiger-dark-blue) !important;
+}
+
+.adminjs-Button--secondary:hover {
+  background-color: var(--tiger-grey) !important;
+}
+
+/* Table styles */
+.adminjs-Table th {
+  background-color: var(--tiger-grey) !important;
+  color: var(--tiger-dark-blue) !important;
+  font-weight: 500 !important;
+}
+
+.adminjs-Table tr:hover {
+  background-color: rgba(0, 33, 71, 0.05) !important;
+}
+
+/* Form styles */
+.adminjs-Input:focus {
+  border-color: var(--tiger-dark-blue) !important;
+  box-shadow: 0 0 0 2px rgba(0, 33, 71, 0.2) !important;
+}
+
+.adminjs-Label {
+  color: var(--tiger-dark-blue) !important;
+  font-weight: 500 !important;
+}
+
+.adminjs-Select__control--is-focused {
+  border-color: var(--tiger-dark-blue) !important;
+  box-shadow: 0 0 0 2px rgba(0, 33, 71, 0.2) !important;
+}
+
+/* Card styles */
+.adminjs-Card {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  border: none !important;
+}
+
+.adminjs-Card-header {
+  background-color: white !important;
+  border-bottom: 1px solid #eee !important;
+  padding: 1rem !important;
+}
+
+.adminjs-Card-title {
+  color: var(--tiger-dark-blue) !important;
+  font-weight: 500 !important;
+}
+
+/* Dashboard widgets */
+.adminjs-Dashboard-card {
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  transition: transform 0.3s, box-shadow 0.3s !important;
+}
+
+.adminjs-Dashboard-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Action buttons */
+.action-button--filter {
+  background-color: var(--tiger-orange) !important;
+  color: white !important;
+}
+
+.action-button--filter:hover {
+  background-color: var(--tiger-orange-light) !important;
+}
+
+/* Badge styling */
+.adminjs-Badge {
+  border-radius: 12px !important;
+  padding: 0.25rem 0.75rem !important;
+}
+
+.adminjs-Badge--primary {
+  background-color: var(--tiger-dark-blue) !important;
+}
+
+.adminjs-Badge--success {
+  background-color: #2e7d32 !important;
+}
+
+.adminjs-Badge--info {
+  background-color: var(--tiger-blue-60) !important;
+}
+
+.adminjs-Badge--warning {
+  background-color: var(--tiger-orange) !important;
+}
+
+/* Pagination */
+.adminjs-Pagination-item.active {
+  background-color: var(--tiger-dark-blue) !important;
+  color: white !important;
+}
+
+.adminjs-Pagination-item:hover:not(.active) {
+  background-color: var(--tiger-grey) !important;
+}
+
+/* Toast notifications */
+.adminjs-Toastify__toast--success {
+  background-color: #2e7d32 !important;
+}
+
+.adminjs-Toastify__toast--error {
+  background-color: #d32f2f !important;
+}
+
+.adminjs-Toastify__toast--info {
+  background-color: var(--tiger-dark-blue) !important;
+}
+
+.adminjs-Toastify__toast--warning {
+  background-color: var(--tiger-orange) !important;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .login-container {
+    max-width: 90%;
+    margin: 0 1rem;
+  }
+  
+  .adminjs-Sidebar {
+    width: 100% !important;
+  }
+}
+

@@ -8,6 +8,7 @@ import cors from "cors";
 import { sequelize, User, Product, Order } from "./models/models.js";
 import dotenv from "dotenv";
 
+
 dotenv.config();
 
 // ✅ Register Sequelize adapter
@@ -23,6 +24,7 @@ app.use(
     saveUninitialized: true,
   })
 );
+app.use(express.static('public'));
 
 const initializeAdmin = async () => {
   try {
@@ -68,6 +70,26 @@ const initializeAdmin = async () => {
           welcomeMessage: "Welcome to Tiger Analytics Admin Panel",
         },
       },
+        // Add this section:
+  assets: {
+    styles: [
+      'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap',
+      'public/adminjs-custom.css',
+    ],
+  },
+  env: {
+    APP_NAME: "Tiger Analytics Admin",
+  },
+  // Define custom components
+  componentLoader: {
+    components: {
+      Login: {
+        path: '.adminjs/components/Login.jsx',
+        // Or if using a bundler like webpack in AdminJS 6+
+        // component: '.adminjs/components/Login', 
+      },
+    }
+  },
     });
 
     // ✅ Secure AdminJS with authentication
