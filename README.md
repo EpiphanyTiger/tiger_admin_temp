@@ -213,7 +213,7 @@ const adminJs = new AdminJS({
 
 ## Customizing the UI
 
-The template comes with a pre-configured UI, but you can customize it to match your brand.
+The template comes with a pre-configured UI, but you can customize it to match your project needs.
 
 ### Basic Branding
 
